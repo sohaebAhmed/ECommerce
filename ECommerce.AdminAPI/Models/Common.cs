@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.AdminAPI.Models
 {
     [Table("Cities", Schema = "Common")]
     public class City
     {
+        [Key]
         public int CityID { get; set; }
         public string Name { get; set; } = null!;
         public int StateID { get; set; }
@@ -14,6 +16,7 @@ namespace ECommerce.AdminAPI.Models
     [Table("Countries", Schema = "Common")]
     public class Country
     {
+        [Key]
         public int CountryId { get; set; }
         public string Name { get; set; } = null!;
     }
@@ -21,6 +24,7 @@ namespace ECommerce.AdminAPI.Models
     [Table("Gender", Schema = "Common")]
     public class Gender
     {
+        [Key]
         public int GenderID { get; set; }
         public string Name { get; set; } = null!;
     }
@@ -28,6 +32,7 @@ namespace ECommerce.AdminAPI.Models
     [Table("Seasons", Schema = "Common")]
     public class Season
     {
+        [Key]
         public int SeasonID { get; set; }
         public string Name { get; set; } = null!;
     }
@@ -35,6 +40,7 @@ namespace ECommerce.AdminAPI.Models
     [Table("States", Schema = "Common")]
     public class State
     {
+        [Key]
         public int StateID { get; set; }
         public string Name { get; set; } = null!;
         public int CountryId { get; set; }

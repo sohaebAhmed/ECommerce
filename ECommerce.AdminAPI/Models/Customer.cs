@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerce.AdminAPI.Models
 {
     [Table("Address", Schema = "Customer")]
     public class Address
     {
+        [Key]
         public int AddressId { get; set; }
         public int? AddedTypeId { get; set; }
         public int? CustomerId { get; set; }
@@ -22,6 +24,7 @@ namespace ECommerce.AdminAPI.Models
     [Table("AddressType", Schema = "Customer")]
     public class AddressType
     {
+        [Key]
         public int? AddressTypeId { get; set; }
         public string? Name { get; set; }
     }
@@ -29,6 +32,7 @@ namespace ECommerce.AdminAPI.Models
     [Table("Details", Schema = "Customer")]
     public class CustomerDetails
     {
+        [Key]
         public int CustomerId { get; set; }
         public int RoleId { get; set; }
         public string? FirstName { get; set; }
