@@ -28,7 +28,7 @@ namespace ECommerce.API.Models
         public string PhoneNumber { get; set; } = null!;
         public bool? IsPhoneNumberVerified { get; set; }
         public string Password { get; set; } = null!;
-        public int? AddressId { get; set; }
+        //public int? AddressId { get; set; }
         public string? WebsiteURL { get; set; }
         public bool? IsActive { get; set; }
         public DateTime? JoinedOn { get; set; }

@@ -12,6 +12,7 @@ namespace ECommerce.API.Data
 
         // 🏙️ Common Schema
         public DbSet<City> Cities { get; set; }
+        public DbSet<Color> Colors { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Gender> Genders { get; set; }
         public DbSet<Season> Seasons { get; set; }
@@ -29,12 +30,23 @@ namespace ECommerce.API.Data
         // 🛡️ User Schema
         public DbSet<Role> UserRoles { get; set; }
 
+        // 🛍️ Product Schema
+        public DbSet<Category> ProductCategories { get; set; }
+        public DbSet<ClothingSize> ClothingSizes { get; set; }
+        public DbSet<TargetAudience> TargetAudiences { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<ProductVariant> ProductVariants { get; set; }
+        public DbSet<FootwearSize> FootwearSizes { get; set; }
+        public DbSet<ProductDetail> ProductDetails { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             // Ensures entity class names match the schema and table (in case needed explicitly)
             modelBuilder.Entity<City>().ToTable("Cities", "Common");
+            modelBuilder.Entity<Color>().ToTable("Colors", "Common");
             modelBuilder.Entity<Country>().ToTable("Countries", "Common");
             modelBuilder.Entity<Gender>().ToTable("Gender", "Common");
             modelBuilder.Entity<Season>().ToTable("Seasons", "Common");
@@ -48,6 +60,15 @@ namespace ECommerce.API.Data
             modelBuilder.Entity<MerchantDetails>().ToTable("Details", "Merchant");
 
             modelBuilder.Entity<Role>().ToTable("Roles", "User");
+
+            modelBuilder.Entity<Category>().ToTable("Categories", "Product");
+            modelBuilder.Entity<ClothingSize>().ToTable("ClothingSizes", "Product");
+            modelBuilder.Entity<TargetAudience>().ToTable("TargetAudiences", "Product");
+            modelBuilder.Entity<SubCategory>().ToTable("SubCategories", "Product");
+            modelBuilder.Entity<ProductImage>().ToTable("Images", "Product");
+            modelBuilder.Entity<ProductVariant>().ToTable("Variants", "Product");
+            modelBuilder.Entity<FootwearSize>().ToTable("FootwearSizes", "Product");
+            modelBuilder.Entity<ProductDetail>().ToTable("Details", "Product");
         }
     }
 }

@@ -8,7 +8,7 @@ namespace ECommerce.API.Models
     {
         [Key]
         public int AddressId { get; set; }
-        public int? AddedTypeId { get; set; }
+        public int? AddressTypeId { get; set; }
         public int? CustomerId { get; set; }
         public int? CountryId { get; set; }
         public int? StateId { get; set; }
@@ -44,7 +44,7 @@ namespace ECommerce.API.Models
         public bool? IsPhoneNumberVerfied { get; set; }
         public string? Password { get; set; }
         public DateTime? DateOfBirth { get; set; }
-        public int? AddressId { get; set; }
+        //public int? AddressId { get; set; }
         public int? GenderId { get; set; }
         public bool? IsActive { get; set; }
         public DateTime? JoinedOn { get; set; }

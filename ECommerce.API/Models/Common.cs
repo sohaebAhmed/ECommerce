@@ -13,6 +13,15 @@ namespace ECommerce.API.Models
         public int CountryId { get; set; }
     }
 
+    [Table("Colors", Schema = "Common")]
+    public class Color
+    {
+        [Key]
+        public int ColorId { get; set; }
+        public string ColorName { get; set; }
+        public string ColorHex { get; set; }
+    }
+
     [Table("Countries", Schema = "Common")]
     public class Country
     {

@@ -54,8 +54,8 @@ namespace ECommerce.API.Services
                 await _context.SaveChangesAsync();
 
                 // Update AddressId in customer
-                customer.AddressId = address.AddressId;
-                _context.CustomerDetails.Update(customer);
+                //customer.AddressId = address.AddressId;
+                //_context.CustomerDetails.Update(customer);
             }
             else if (request.Role.ToLower() == "merchant")
             {
@@ -90,8 +90,8 @@ namespace ECommerce.API.Services
                 await _context.SaveChangesAsync();
 
                 // Update AddressId in merchant
-                merchant.AddressId = address.AddressId;
-                _context.MerchantDetails.Update(merchant);
+                //merchant.AddressId = address.AddressId;
+                //_context.MerchantDetails.Update(merchant);
             }
             else
             {
