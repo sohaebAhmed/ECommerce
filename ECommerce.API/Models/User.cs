@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ECommerce.AdminAPI.Models
+namespace ECommerce.API.Models
 {
     [Table("Roles", Schema = "User")]
     public class Role

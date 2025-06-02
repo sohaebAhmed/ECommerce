@@ -1,9 +1,9 @@
-﻿using ECommerce.AdminAPI.Data;
-using ECommerce.AdminAPI.Models;
-using ECommerce.AdminAPI.Utility;
+﻿using ECommerce.API.Data;
+using ECommerce.API.Models;
+using ECommerce.API.Utility;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.AdminAPI.Services
+namespace ECommerce.API.Services
 {
     public class SignupService : ISignupService
     {

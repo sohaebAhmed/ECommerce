@@ -1,5 +1,5 @@
-using ECommerce.AdminAPI.Data;
-using ECommerce.AdminAPI.Services;
+using ECommerce.API.Data;
+using ECommerce.API.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

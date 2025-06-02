@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
 
-namespace ECommerce.AdminAPI.Utility
+namespace ECommerce.API.Utility
 {
     public class Utils
     {

@@ -1,8 +1,8 @@
-﻿using ECommerce.AdminAPI.Data;
+﻿using ECommerce.API.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ECommerce.AdminAPI.Controllers
+namespace ECommerce.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -1,4 +1,4 @@
-﻿namespace ECommerce.AdminAPI.Models
+﻿namespace ECommerce.API.Models
 {
     public class SignUpDTO
     {
