@@ -45,7 +45,7 @@ namespace ECommerce.AdminAPI.Controllers
                 return BadRequest("Postal code must be exactly 6 digits.");
 
             var result = await _signupService.RegisterAsync(request);
-            
+            //
             if (!result)
                 return BadRequest("Failed to register. Try again.");
 
